@@ -1,28 +1,27 @@
 package basics;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 
 public class TestBase {
 
-    @Before
+    @BeforeEach
     public void setup() {
         System.out.println("I was run before each test");
     }
 
-    @After
+    @AfterEach
     public void cleanUp() {
         System.out.println("I was run after each test");
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void runOnceBeforeAll() {
         System.out.println("I was run once before all tests");
     }
 
-    @AfterClass
+    @BeforeAll
     public static void runOnceAfterAll() {
         System.out.println("I was run once after all tests");
     }

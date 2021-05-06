@@ -1,7 +1,7 @@
 package selenium;
 
-import org.junit.After;
-import org.junit.Before;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,7 +14,7 @@ public class SeleniumTestBase {
         return driver;
     }
 
-    @Before
+    @BeforeAll
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
@@ -22,7 +22,7 @@ public class SeleniumTestBase {
         driver = new ChromeDriver();
     }
 
-    @After
+    @AfterAll
     public void cleanUp() {
         driver.quit();
     }

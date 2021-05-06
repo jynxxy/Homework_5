@@ -1,30 +1,31 @@
 package basics;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class FirstTest {
 
     @Test
     public void thisIsMyFirstTest() {
-        Assert.assertEquals("qwe", "qwe");
-        Assert.assertEquals(2, 2);
-        Assert.assertTrue(false);
+
+        Assertions.assertEquals("qwe", "qwe");
+        Assertions.assertEquals(2, 2);
+        Assertions.assertTrue(false);
         System.out.println(">>>>This is my first test");
     }
 
     @Test
     public void thisIsMySecondTest() {
         int i = 2;
-        Assert.assertEquals(i, 2);
-        Assert.assertEquals(2, 3);
+        Assertions.assertEquals(i, 2);
+        Assertions.assertEquals(2, 3);
         System.out.println(">>>>This is my second test!!!");
     }
 
     @Test
     public void thisIsMyThirdTest() {
-        Assert.assertEquals("qwe", "qwe");
-        Assert.assertEquals(2, 2);
+        Assertions.assertEquals("qwe", "qwe");
+        Assertions.assertEquals(2, 2);
         System.out.println(">>>>This is my third test!!!");
     }
 }
